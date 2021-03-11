@@ -122,3 +122,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# custom
+
+config_override.py
+.vscode
