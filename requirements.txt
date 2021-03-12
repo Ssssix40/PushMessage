@@ -1,0 +1,17 @@
+certifi==2020.12.5
+chardet==4.0.0
+click==7.1.2
+fastapi==0.63.0
+flake8==3.8.4
+h11==0.12.0
+idna==2.10
+mccabe==0.6.1
+pycodestyle==2.6.0
+pydantic==1.8.1
+pyflakes==2.2.0
+requests==2.25.1
+starlette==0.13.6
+typing-extensions==3.7.4.3
+urllib3==1.26.3
+uvicorn==0.13.4
+yapf==0.30.0
