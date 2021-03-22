@@ -128,3 +128,5 @@ dmypy.json
 
 config_override.py
 .vscode
+config_custom.ini
+test.py
