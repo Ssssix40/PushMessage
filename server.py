@@ -4,9 +4,14 @@ import function
 app = FastAPI()
 
 
-@app.get("/corwechat/{message}")
-async def corwechat(message: str):
-    return function.corWechatPusher(message)
+@app.get("/corwechat/{method}")
+async def corwechat(message: str, method: str):
+    if method == 'markdown':
+        message = message.replace(r'\n', '\n')
+        message = message.replace('@', '#')
+    else:
+        method = 'text'
+    return function.corWechatPusher(method, message)
 
 
 @app.get("/bark/{message}")

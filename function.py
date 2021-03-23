@@ -10,12 +10,12 @@ configs.read('config_custom.ini')
 
 # 企业微信
 # https://work.weixin.qq.com/api/doc/90000/90135/90236
-def corWechatPusher(message):
+def corWechatPusher(method, message):
     data = {
         "touser": configs['corWechat']['toUser'],
-        "msgtype": "text",
+        "msgtype": method,
         "agentid": configs['corWechat']['agentid'],
-        "text": {
+        method: {
             "content": message
         },
         "safe": 0,

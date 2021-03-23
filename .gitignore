@@ -130,3 +130,4 @@ config_override.py
 .vscode
 config_custom.ini
 test.py
+.DS_Store
