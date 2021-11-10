@@ -1,6 +1,7 @@
 import json
 import time
 import requests
+import yagmail
 from configparser import ConfigParser
 
 configs = ConfigParser()
@@ -53,3 +54,17 @@ def flomo(message):
     url = configs['flomo']['url']
     payload = {'content': message}
     return requests.post(url, json=payload).text
+
+
+def mail(towho, title, content):
+    url = configs['mail']['url']
+    user = configs['mail']['user']
+    password = configs['mail']['password']
+    print(url, user, password, title, content, towho)
+    yag = yagmail.SMTP(user=user, password=password, host=url)
+    yag.send(towho, title, content)
+    return '''
+    to: %s,
+    title: %s,
+    content: %s
+    ''' % (towho, title, content)

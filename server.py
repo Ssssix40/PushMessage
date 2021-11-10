@@ -22,3 +22,8 @@ async def bark(message: str):
 @app.get('/flomo/{message}')
 async def flomo(message: str):
     return function.flomo(message)
+
+
+@app.get('/mail')
+async def mail(title: str, content: str, towho: str):
+    return function.mail(towho, title, content)

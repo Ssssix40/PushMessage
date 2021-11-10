@@ -53,6 +53,10 @@ example:
 
 `server/bark/message`
 
+### mail
+
+`/mail?towho=mailadrees&title=test&content=hello,world`
+
 ## TODO
 
 1. 完善已有的各种推送方式
@@ -74,9 +78,13 @@ example:
     - [x] bark
     - [x] flomo
     - [x] 企业微信 
-    - [ ] 邮件
+    - [x] 邮件
 
 ## 更新日志
+
+### 0.3
+
+增加mail功能(yagmail方式)
 
 ### 0.2.2
 
